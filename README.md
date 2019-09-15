@@ -1,2 +1,2 @@
 # physically-faucet
-Lightning Network bitcoin faucet using lnurl
+Lightning Network bitcoin faucet using http://lightning.gifts api
