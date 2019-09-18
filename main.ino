@@ -17,7 +17,9 @@
 #include <SPI.h>
 #include "Ucglib.h"
 
+//If using jump cables the hardware SPI is better, if you're soldering the pins, for convenience, the software SPI pin map aligns perfectly https://i.imgur.com/Hd2lQYa.png
 Ucglib_ST7735_18x128x160_HWSPI ucg(/*cd=*/ 17, /*cs=*/ 5, /*reset=*/ 16);
+//Ucglib_ST7735_18x128x160_SWSPI ucg(/*sclk=*/ 16, /*data=*/ 17, /*cd=*/ 5, /*cs=*/ 19, /*reset=*/ 18); 
 
 
 String giftinvoice;
