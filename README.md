@@ -1,4 +1,4 @@
-![ESP32 GPIO Map](https://i.imgur.com/nCX8g1f.png)
+![ESP32 GPIO Map](https://i.imgur.com/jw9pEho.png)
 
 Lightning Network bitcoin faucet using http://lightning.gifts api
 
