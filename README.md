@@ -2,6 +2,8 @@
 
 Lightning Network bitcoin faucet using http://lightning.gifts api
 
+![ESP32 GPIO Map](https://i.imgur.com/Aahgj1d.png)
+
 # Parts (Project cost £8)
 - ST7735 1.8 TFT, ESP32 NodeMCU 32s
 
