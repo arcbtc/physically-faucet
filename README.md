@@ -1,13 +1,13 @@
-![ESP32 GPIO Map](https://i.imgur.com/jw9pEho.png)
+![lightning network faucet](https://i.imgur.com/jw9pEho.png)
 
 Lightning Network bitcoin faucet using http://lightning.gifts api
-
-![ESP32 GPIO Map](https://i.imgur.com/Aahgj1d.png)
 
 # Parts (Project cost £8)
 - ST7735 1.8 TFT, ESP32 NodeMCU 32s
 
-![ESP32 GPIO Map](https://i.imgur.com/lRGaeKv.png)
+![bitcoin](https://i.imgur.com/lRGaeKv.png)
+
+![ESP32](https://i.imgur.com/Aahgj1d.png)
 
 # Workflow
 - ESP32 connects to lightning.gifts, and generates an invoice for the amount set
