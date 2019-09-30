@@ -37,7 +37,7 @@ void setup() {
   WiFi.begin(wifiSSID, wifiPASS);   
   while (WiFi.status() != WL_CONNECTED) {
      M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(60, 80);
+     M5.Lcd.setCursor(0, 80);
      M5.Lcd.setTextSize(4);
      M5.Lcd.setTextColor(TFT_GREEN);
      M5.Lcd.println("CONNECTING TO WIFI");
@@ -50,7 +50,7 @@ void setup() {
 void loop() {
   nodecheck();
   M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(60, 80);
+     M5.Lcd.setCursor(20, 80);
      M5.Lcd.setTextSize(4);
      M5.Lcd.setTextColor(TFT_GREEN);
      M5.Lcd.println("GENERATING GIFT!");
@@ -70,7 +70,7 @@ void loop() {
 
   for (int i = 5; i >= 1; i--){
      M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(60, 80);
+     M5.Lcd.setCursor(00, 80);
      M5.Lcd.setTextSize(4);
      M5.Lcd.setTextColor(TFT_RED);
      M5.Lcd.println("More sats in "+ String(i) +" min");
