@@ -1,4 +1,4 @@
-//As using admin macaroon, imited exposure of funds is reccomended -using Zap desktop wallet https://docs.zaphq.io/docs-desktop-neutrino-connect
+//As using admin macaroon, limited exposure of funds is reccomended - this project used Zap desktop wallet as it has neutrino LND https://docs.zaphq.io/docs-desktop-neutrino-connect
 //In terminal, with Zap running run *ssh -R SOME-NAME.serveo.net:3010:localhost:8180 serveo.net* (replace SOME-NAME, see line 25)
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h> 
