@@ -1,3 +1,5 @@
+//As using admin macaroon, imited exposure of funds is reccomended -using Zap desktop wallet https://docs.zaphq.io/docs-desktop-neutrino-connect
+//In terminal, with Zap running run *ssh -R SOME-NAME.serveo.net:3010:localhost:8180 serveo.net* (replace SOME-NAME, see line 25)
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h> 
 #include <M5Stack.h> 
@@ -20,7 +22,7 @@ char wifiPASS[] = "YOUR-WIFI-PASS";
 const char* gifthost = "api.lightning.gifts";
 const int httpsPort = 443;
 
-const char* lndhost = "SOME-NAME.serveo.net"; 
+const char* lndhost = "SOME-NAME.serveo.net"; //in terminal run ssh -R SOME-NAME.serveo.net:3010:localhost:8180 serveo.net
 String adminmacaroon = "YOUR-LND-ADMIN-MACAROON";
 const int lndport = 3010;
 
@@ -42,12 +44,11 @@ void setup() {
     delay(2000);
   }
 
-  nodecheck();
-  
 }
 
 
 void loop() {
+  nodecheck();
   M5.Lcd.fillScreen(BLACK);
      M5.Lcd.setCursor(60, 80);
      M5.Lcd.setTextSize(4);
