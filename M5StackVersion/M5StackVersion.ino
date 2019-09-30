@@ -125,7 +125,7 @@ void nodecheck(){
   while(!checker){
   WiFiClientSecure client;
 
-  if (!client.connect(server, lndport)){
+  if (!client.connect(lndhost, lndport)){
 
     M5.Lcd.fillScreen(BLACK);
      M5.Lcd.setCursor(20, 80);
@@ -230,7 +230,7 @@ void page_qrdisplay(String xxx)
 {  
 
   M5.Lcd.fillScreen(BLACK); 
-  M5.Lcd.qrcode(payreq,45,0,240,10);
+  M5.Lcd.qrcode(giftlnurl,45,0,240,10);
   delay(100);
 
 }
