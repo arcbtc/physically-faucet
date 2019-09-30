@@ -37,8 +37,8 @@ void setup() {
   WiFi.begin(wifiSSID, wifiPASS);   
   while (WiFi.status() != WL_CONNECTED) {
      M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(0, 80);
-     M5.Lcd.setTextSize(4);
+     M5.Lcd.setCursor(45, 80);
+     M5.Lcd.setTextSize(2);
      M5.Lcd.setTextColor(TFT_GREEN);
      M5.Lcd.println("CONNECTING TO WIFI");
     delay(2000);
@@ -50,8 +50,8 @@ void setup() {
 void loop() {
   nodecheck();
   M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(20, 80);
-     M5.Lcd.setTextSize(4);
+     M5.Lcd.setCursor(65, 80);
+     M5.Lcd.setTextSize(2);
      M5.Lcd.setTextColor(TFT_GREEN);
      M5.Lcd.println("GENERATING GIFT!");
   create_gift();
@@ -70,8 +70,8 @@ void loop() {
 
   for (int i = 5; i >= 1; i--){
      M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(00, 80);
-     M5.Lcd.setTextSize(4);
+     M5.Lcd.setCursor(45, 80);
+     M5.Lcd.setTextSize(2);
      M5.Lcd.setTextColor(TFT_RED);
      M5.Lcd.println("More sats in "+ String(i) +" min");
      delay(60000);
@@ -129,8 +129,8 @@ void nodecheck(){
   if (!client.connect(lndhost, lndport)){
 
     M5.Lcd.fillScreen(BLACK);
-     M5.Lcd.setCursor(20, 80);
-     M5.Lcd.setTextSize(3);
+     M5.Lcd.setCursor(65, 80);
+     M5.Lcd.setTextSize(2);
      M5.Lcd.setTextColor(TFT_RED);
      M5.Lcd.println("NO NODE DETECTED");
      delay(1000);
