@@ -3,6 +3,7 @@
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h> 
 #include <M5Stack.h> 
+#include "Physfau.c"
 
 String giftinvoice;
 String giftid;
@@ -39,7 +40,7 @@ void setup() {
      M5.Lcd.fillScreen(BLACK);
      M5.Lcd.setCursor(45, 80);
      M5.Lcd.setTextSize(2);
-     M5.Lcd.setTextColor(TFT_GREEN);
+     M5.Lcd.setTextColor(TFT_WHITE);
      M5.Lcd.println("CONNECTING TO WIFI");
     delay(2000);
   }
@@ -48,11 +49,31 @@ void setup() {
 
 
 void loop() {
+    nodecheck();
+  M5.Lcd.drawBitmap(0, 0, 320, 240, (uint8_t *)Physfau_map);
+  bool checkah = false;
+  while(checkah == false){
+   M5.update();
+   if (M5.BtnA.wasReleased()) {
+    checkah = true;
+   }
+   else if (M5.BtnB.wasReleased()) {
+    checkah = true;
+   }
+   else if (M5.BtnC.wasReleased()) {
+    checkah = true;
+   }
+  }
+  M5.Lcd.fillScreen(BLACK);
+     M5.Lcd.setCursor(110, 80);
+     M5.Lcd.setTextSize(2);
+     M5.Lcd.setTextColor(TFT_WHITE);
+     M5.Lcd.println("PROCESSING");
   nodecheck();
   M5.Lcd.fillScreen(BLACK);
      M5.Lcd.setCursor(65, 80);
      M5.Lcd.setTextSize(2);
-     M5.Lcd.setTextColor(TFT_GREEN);
+     M5.Lcd.setTextColor(TFT_WHITE);
      M5.Lcd.println("GENERATING GIFT!");
   create_gift();
   makepayment();
